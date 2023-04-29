@@ -1,4 +1,6 @@
 ﻿using CineRent.Models;
+using CineRent.ViewModels;
+using System.Collections.Generic;
 using System.Web.Mvc;
 
 namespace CineRent.Controllers
@@ -9,8 +11,19 @@ namespace CineRent.Controllers
         public ActionResult Random()
         {
             var movie = new Movie() { Name = "Rapunzel" };
+            var customers = new List<Customer>
+            {
+                new Customer{ Name = "customer 1"},
+                new Customer{ Name = "customer 2"}
+            };
 
-            return View(movie);
+            var viewModel = new RandomMovieViewModel
+            {
+                Movie = movie,
+                Customers = customers
+            };
+
+            return View(viewModel);
         }
 
         //attribute routing
