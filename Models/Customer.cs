@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace CineRent.Models
 {
@@ -11,5 +12,6 @@ namespace CineRent.Models
         public bool IsSubscribedToNewsletter { get; set; }
         public MembershipType MembershipType { get; set; } //navigation property
         public byte MembershipTypeId { get; set; } //foreign key
+        public DateTime? Birthdate { get; set; }
     }
 }
