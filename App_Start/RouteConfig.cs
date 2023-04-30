@@ -17,7 +17,7 @@ namespace CineRent
                 new { year = @"\d{4}", month = @"\d{2}" });*/
 
             //attribute routing
-            routes.MapMvcAttributeRoutes();
+            //routes.MapMvcAttributeRoutes();
 
             routes.MapRoute(
                 name: "Default",
